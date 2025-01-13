@@ -9,6 +9,16 @@ import java.util.List;
 
 import static com.lox.grammar.TokenType.*;
 
+/**
+ * A parser has 2 jobs:
+ * 1. Given a valid sequence of tokens, produce a corresponding syntax tree
+ * 2. Given an invalid sequence of tokens, detect any errors and tell the user about their mistakes.
+ *
+ * A decent parser should:
+ * - Be fast
+ * - Report as many distinct errors as there are
+ * - Minimize cascaded errors
+ */
 public class Parser {
 
     private static class ParseError extends RuntimeException {}

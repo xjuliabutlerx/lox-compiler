@@ -3,6 +3,15 @@ package com.lox.ast;
 import com.lox.grammar.Token;
 
 public abstract class Expr {
+
+    /**
+     * The Visitor Pattern is about approximating functional programming style within an object-oriented program.
+     *
+     * For a scanner, the Visitor Pattern is used to route a given expression type to its respective AST node
+     * representation.
+     *
+     * @param <R>
+     */
     public interface Visitor<R> {
         R visitBinaryExpr(Binary expr);
 
